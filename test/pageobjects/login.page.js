@@ -1,25 +1,45 @@
 import Page from './page';
 
 class LoginPage extends Page {
-    get inputUsername () { return $('#normal_login_email'); }
-    get inputPassword () { return $('#normal_login_password'); }
-    get buttonSubmit () { return $('.login-form-button'); }
-
-    setLogin (email) {
-        this.inputUsername.setValue(email);
+    get inputUsername() {
+        return $('#normal_login_email');
     }
 
-    setPassword (password) {
-        this.inputPassword.setValue(password);
+    get inputPassword() {
+        return $('#normal_login_password');
     }
 
-    clickSubmitButton () {
-        this.buttonSubmit.click();
+    get buttonSubmit() {
+        return $('.login-form-button');
     }
 
-    open () {
+    get errorToast() {
+        return $('.ant-notification-notice-message')
+    }
+
+    open() {
         return super.open('/');
-    }
-}
+    };
+
+    setLogin(email) {
+        this.inputUsername.setValue(email);
+    };
+
+    setPassword(password) {
+        this.inputPassword.setValue(password);
+    };
+
+    clickSubmitButton() {
+        this.buttonSubmit.click();
+    };
+
+    submitButtonIsDisabled() {
+        expect(this.buttonSubmit).toBeDisplayed();
+    };
+
+    errorToastAppeared() {
+        expect(this.errorToast).toBeDisplayed();
+    };
+};
 
 export default new LoginPage();
