@@ -1,5 +1,5 @@
-import LoginPage from  '../pageobjects/login.page';
-import ProfilePage from '../pageobjects/profile.page';
+import LoginPage from '../pageobjects/login.page';
+import ProfilePage from '../pageobjects/portal/profile.portal.page';
 
 describe('Auth', () => {
     beforeEach(() => {
@@ -36,5 +36,3 @@ describe('Auth', () => {
     });
 
 });
-
-
