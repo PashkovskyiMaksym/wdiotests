@@ -11,8 +11,8 @@ describe('Auth', () => {
     });
 
     it('user logs in with valid data', () => {
-        LoginPage.setLogin('yapebo2166@grokleft.com');
-        LoginPage.setPassword('Offspring777');
+        LoginPage.setLogin(process.env.LOGIN);
+        LoginPage.setPassword(process.env.PASSWORD);
         LoginPage.clickSubmitButton();
         ProfilePage.isOpen();
     });
