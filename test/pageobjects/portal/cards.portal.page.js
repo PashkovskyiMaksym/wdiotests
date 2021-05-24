@@ -6,13 +6,13 @@ class CardsPage extends PortalPage {
         return $('h1');
     }
 
-    open() {
+    async open() {
         return super.open('/cards')
     }
 
-    isOpen() {
-        expect(browser).toHaveUrlContaining('/flash');
-        expect(this.sectionHeader).toHaveText('Flash cards in beta mode so far');
+    async isOpen() {
+        await expect(browser).toHaveUrlContaining('/flash');
+        await expect(this.sectionHeader).toHaveText('Flash cards in beta mode so far');
     }
 
 }

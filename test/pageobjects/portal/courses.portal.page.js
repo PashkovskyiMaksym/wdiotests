@@ -6,13 +6,13 @@ class CoursesPage extends PortalPage {
         return $('section > div > h1');
     }
 
-    open() {
+    async open() {
         return super.open('/course')
     }
 
-    isOpen() {
-        expect(browser).toHaveUrlContaining('/course');
-        expect(this.sectionHeader).toHaveText('Interactive Courses');
+    async isOpen() {
+        await expect(browser).toHaveUrlContaining('/course');
+        await expect(this.sectionHeader).toHaveText('Interactive Courses');
     }
 
 }

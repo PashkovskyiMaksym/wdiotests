@@ -3,9 +3,9 @@ import PortalPage from '../page';
 class ProfilePage extends PortalPage {
   get iconUser () { return $('.ant-avatar-square'); }
 
-  isOpen () {
-    expect(browser).toHaveUrlContaining('/profile/');
-    expect(this.iconUser).toBeDisplayed();
+  async isOpen () {
+    await expect(browser).toHaveUrlContaining('/profile/');
+    await expect(this.iconUser).toBeDisplayed();
   }
 }
 

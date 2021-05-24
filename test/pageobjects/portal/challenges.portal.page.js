@@ -6,13 +6,13 @@ class ChallengesPage extends PortalPage {
         return $('h1');
     }
 
-    open() {
+    async open() {
         return super.open('/challenges')
     }
 
-    isOpen() {
-        expect(browser).toHaveUrlContaining('/challenge');
-        expect(this.sectionHeader).toHaveText('Coding challenges from very basic to interview level');
+    async isOpen() {
+        await expect(browser).toHaveUrlContaining('/challenge');
+        await expect(this.sectionHeader).toHaveText('Coding challenges from very basic to interview level');
     }
 
 }

@@ -1,7 +1,7 @@
 import PortalPage from "./portal.page";
 
 class MainPage extends PortalPage {
-    open() {
+    async open() {
         return super.open('/')
     }
 }

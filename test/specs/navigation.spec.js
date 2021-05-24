@@ -16,25 +16,21 @@ describe('Navigation', () => {
 
     it('courses page opens', () => {
         MainPage.goToCourses();
-
         CoursesPage.isOpen();
     });
 
     it('diary page opens', () => {
         MainPage.goToDiary();
-
         DiaryPage.isOpen();
     });
 
     it('cards page opens', () => {
         MainPage.goToCards();
-
         CardsPage.isOpen();
     });
 
     it('challenges page opens', () => {
         MainPage.goToChallenges();
-
         ChallengesPage.isOpen();
     });
 

@@ -1,35 +1,24 @@
 import Page from '../page';
 
 export default class PortalPage extends Page {
-    get linkCourses() {
-        return $('[data-qa="topmenu-Courses"]');
+    get linkCourses() {return $('[data-qa="topmenu-Courses"]');}
+    get linkCards() {return $('[data-qa="topmenu-Cards"]');}
+    get linkDiary() {return $('[data-qa="topmenu-Diary"]');}
+    get linkChallenges() {return $('[data-qa="topmenu-Challenges"]');}
+
+    async goToCourses() {
+        await this.linkCourses.click();
     }
 
-    get linkCards() {
-        return $('[data-qa="topmenu-Cards"]');
+    async goToCards() {
+        await this.linkCards.click();
     }
 
-    get linkDiary() {
-        return $('[data-qa="topmenu-Diary"]');
+    async goToDiary() {
+        await this.linkDiary.click();
     }
 
-    get linkChallenges() {
-        return $('[data-qa="topmenu-Challenges"]');
-    }
-
-    goToCourses() {
-        this.linkCourses.click();
-    }
-
-    goToCards() {
-        this.linkCards.click();
-    }
-
-    goToDiary() {
-        this.linkDiary.click();
-    }
-
-    goToChallenges() {
-        this.linkChallenges.click();
+    async goToChallenges() {
+        await this.linkChallenges.click();
     }
 }

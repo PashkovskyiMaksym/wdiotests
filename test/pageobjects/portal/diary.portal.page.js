@@ -6,13 +6,13 @@ class DiaryPage extends PortalPage {
         return $('h1');
     }
 
-    open() {
+    async open() {
         return super.open('/diary')
     }
 
-    isOpen() {
-        expect(browser).toHaveUrlContaining('/diary');
-        expect(this.sectionHeader).toHaveText('Diaries is self accountability tool');
+    async isOpen() {
+        await expect(browser).toHaveUrlContaining('/diary');
+        await expect(this.sectionHeader).toHaveText('Diaries is self accountability tool');
     }
 
 }
